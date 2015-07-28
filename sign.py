@@ -59,7 +59,7 @@ decompressed_data = zlib.decompress(contents, 16+zlib.MAX_WBITS)
 import json
 
 try:
-  if json.loads(decompressed_data)['status'] == 1:
+  if json.loads(decompressed_data)['status'] == '1':
     print 'Sign successful!'
   else:
     print 'Sign faild, Data: %s' % decompressed_data
